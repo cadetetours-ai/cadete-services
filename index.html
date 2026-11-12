@@ -19,7 +19,49 @@
       --cinza: #f3f6fa;
       --texto: #263445;
     }
+    /* BOTÃO FLUTUANTE WHATSAPP */
 
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: #25D366;
+  color: #ffffff;
+  padding: 14px 19px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  transition: 0.2s;
+}
+
+.whatsapp-float:hover {
+  background: #1ebe5d;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 760px) {
+  .whatsapp-float {
+    right: 15px;
+    bottom: 15px;
+    padding: 13px 16px;
+    font-size: 14px;
+  }
+}
+   /* REDUZIR ESPAÇO ENTRE SOBRE E SERVIÇOS */
+
+.about {
+  padding: 45px 0 40px;
+}
+
+#servicos {
+  padding-top: 40px;
+}
     * {
       box-sizing: border-box;
       margin: 0;
@@ -802,6 +844,18 @@
     </p>
 
   </footer>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a class="whatsapp-float"
+   href="https://wa.me/258875058349?text=Ola%2C%20Cadete%20Services.%20Gostaria%20de%20solicitar%20um%20orcamento%20gratuito."
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Pedir orçamento gratuito pelo WhatsApp">
+
+  <span>📲</span>
+  <span>Pedir orçamento</span>
+
+</a>
 
 </body>
 </html>
