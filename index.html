@@ -10,16 +10,6 @@
   <meta name="theme-color" content="#0756a3">
 
   <style>
-    .contact .whatsapp-link {
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.contact .whatsapp-link:hover {
-  color: #d6a52d;
-}
     :root {
       --azul: #0756a3;
       --azul-escuro: #063767;
@@ -79,13 +69,14 @@
     }
 
     .logo span {
-    .logo small {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
       color: var(--dourado);
+    }
+
+    .logo small {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
 
     nav {
@@ -266,6 +257,17 @@
       margin: 12px 0 22px;
     }
 
+    .contact .whatsapp-link {
+      color: var(--branco);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .contact .whatsapp-link:hover {
+      color: var(--dourado);
+    }
+
     footer {
       background: #042746;
       color: var(--branco);
@@ -329,9 +331,9 @@
   <header>
     <div class="container header-content">
       <a class="logo" href="#inicio">
-  CADETE <span>SERVICES</span>
-  <small>Prestação de Serviços</small>
-</a>
+        CADETE <span>SERVICES</span>
+        <small>Prestação de Serviços</small>
+      </a>
 
       <nav aria-label="Navegação principal">
         <a href="#inicio">Início</a>
@@ -343,14 +345,22 @@
   </header>
 
   <main>
+
     <section class="hero" id="inicio">
       <div class="container">
         <h1>Cuidamos do seu imóvel. Simplificamos a sua vida.</h1>
+
         <p>
           Soluções coordenadas de limpeza, manutenção, reparações
           e preparação de imóveis na Beira, Moçambique.
         </p>
-        <a class="btn btn-gold" href="https://wa.me/258875058349" target="_blank" rel="noopener">Pedir orçamento gratuito por WhatsApp</a>
+
+        <a class="btn btn-gold"
+           href="https://wa.me/258875058349"
+           target="_blank"
+           rel="noopener">
+          Pedir orçamento gratuito por WhatsApp
+        </a>
       </div>
     </section>
 
@@ -365,6 +375,7 @@
     <section class="about">
       <div class="container">
         <h2 class="section-title">Sobre a Cadete Services</h2>
+
         <p>
           A Cadete Services é uma iniciativa orientada para apoiar
           proprietários e clientes na conservação e valorização dos
@@ -377,6 +388,7 @@
     <section id="servicos">
       <div class="container">
         <h2 class="section-title">Os nossos serviços</h2>
+
         <p class="section-intro">
           Um único contacto para organizar diferentes necessidades
           de limpeza, manutenção e assistência ao seu imóvel.
@@ -445,6 +457,7 @@
     <section class="property" id="imoveis">
       <div class="container property-content">
         <h2 class="section-title">Apoio no Arrendamento de Imóveis</h2>
+
         <p>
           Ajudamos proprietários a divulgar os seus imóveis e a encontrar
           potenciais interessados no arrendamento. A decisão final sobre
@@ -452,6 +465,7 @@
         </p>
 
         <div class="steps">
+
           <div class="step">
             <strong>1. Divulgação</strong>
             Apresentação do imóvel aos potenciais interessados.
@@ -466,44 +480,55 @@
             <strong>3. Apoio</strong>
             Apoio na comunicação entre proprietário e interessado.
           </div>
+
         </div>
       </div>
     </section>
 
     <section id="contacto" class="contact">
       <div class="container">
-       
-<h2 class="section-title">Fale connosco</h2>
 
-<p>
-  Precisa de limpeza, manutenção, reparação ou apoio
-  para preparar o seu imóvel?
-</p>
+        <h2 class="section-title">Fale connosco</h2>
 
-<p><strong>Localização:</strong> Beira, Sofala, Moçambique</p>
+        <p>
+          Precisa de limpeza, manutenção, reparação ou apoio
+          para preparar o seu imóvel?
+        </p>
 
-<p>Entre em contacto para apresentar a sua necessidade e solicitar um orçamento.</p>
+        <p>
+          <strong>Localização:</strong> Beira, Sofala, Moçambique
+        </p>
 
-<a class="btn btn-gold" href="mailto:cadetetours@gmail.com">
-  Contactar por email
-</a>
+        <p>
+          Entre em contacto para apresentar a sua necessidade
+          e solicitar um orçamento.
+        </p>
 
-<p style="font-size:14px; margin-top:18px;">
-  <strong>WhatsApp Business:</strong>
-  <a class="whatsapp-link"
-     href="https://wa.me/258875058349"
-     target="_blank"
-     rel="noopener">
-    +258 875058349
-  </a>
-</p>
+        <a class="btn btn-gold" href="mailto:cadetetours@gmail.com">
+          Contactar por email
+        </a>
+
+        <p style="font-size:14px; margin-top:18px;">
+          <strong>WhatsApp Business:</strong>
+          <a class="whatsapp-link"
+             href="https://wa.me/258875058349"
+             target="_blank"
+             rel="noopener">
+            +258 875058349
+          </a>
+        </p>
 
       </div>
     </section>
+
   </main>
 
   <footer>
-    <p><span>CADETE SERVICES</span> | Prestação de Serviços | Beira, Moçambique</p>
+    <p>
+      <span>CADETE SERVICES</span> |
+      Prestação de Serviços | Beira, Moçambique
+    </p>
+
     <p>© 2026 Cadete Services. Todos os direitos reservados.</p>
   </footer>
 
