@@ -17,9 +17,10 @@
       --dourado: #d6a52d;
       --branco: #ffffff;
       --cinza: #f3f6fa;
-      --texto: #263445;
+           --texto: #263445;
     }
-    /* BOTÃO FLUTUANTE WHATSAPP */
+   
+      /* BOTÃO FLUTUANTE WHATSAPP */
 
 .whatsapp-float {
   position: fixed;
@@ -139,32 +140,39 @@
     nav a:hover {
       color: var(--dourado);
     }
+   
 
-    /* BANNER PRINCIPAL */
+/* BANNER PRINCIPAL - CADETE SERVICES */
 
-    .hero {
-      color: var(--branco);
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(
-        135deg,
-        var(--azul-escuro),
-        var(--azul-claro)
-      );
-    }
+.hero {
+  background-color: #ffffff;
+  min-height: auto;
+  padding: 20px 0 30px;
+  display: block;
+  text-align: center;
+  color: #092C59;
+}
 
-    .hero h1 {
-      max-width: 850px;
-      margin: 0 auto 20px;
-      font-size: clamp(32px, 5vw, 48px);
-      line-height: 1.15;
-    }
+.hero-logo {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto 20px;
+}
 
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto 30px;
-      font-size: 18px;
-    }
+.hero h1 {
+  max-width: 850px;
+  margin: 0 auto 20px;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+}
 
     /* BOTÕES */
 
@@ -403,25 +411,25 @@
       .header-content {
         flex-direction: column;
         padding: 15px 0;
-      }
+    }
 
       nav {
         justify-content: center;
         gap: 12px 16px;
-      }
+    }
 
       .hero {
-        padding: 75px 18px;
-      }
+      padding: 10px 0 20px;
+    }
 
       .services-grid,
       .steps {
         grid-template-columns: 1fr;
-      }
+    }
 
       section {
         padding: 55px 0;
-      }
+    }
 
       .service-btn {
         font-size: 14px;
@@ -433,7 +441,7 @@
   <!-- DADOS ESTRUTURADOS PARA GOOGLE -->
 
   <script type="application/ld+json">
-  {
+    {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Cadete Services",
@@ -448,7 +456,7 @@
       "addressRegion": "Sofala",
       "addressCountry": "MZ"
     }
-  }
+    }
   </script>
 
 </head>
@@ -482,17 +490,12 @@
     <section class="hero" id="inicio">
 
       <div class="container">
-
-        <h1>
-          Cuidamos do seu imóvel.
-          Simplificamos a sua vida.
-        </h1>
-
-        <p>
-          Soluções coordenadas de limpeza, manutenção, reparações
-          e preparação de imóveis na Beira, Moçambique.
-        </p>
-
+      
+<img
+  src="logo-cadete-services.png"
+  alt="Cadete Services - Soluções para o seu imóvel"
+  class="hero-logo">
+        
         <a class="btn btn-gold"
            href="https://wa.me/258875058349?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento%20gratuito."
            target="_blank"
@@ -846,11 +849,18 @@
 
   </footer>
 
-Pedir orçamento gratuito pelo WhatsApp
-  <span>📲</span>
-  <span>Pedir orçamento</span>
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/258875058349?text=Ola%2C%20Cadete%20Services!%20Gostaria%20de%20solicitar%20um%20orcamento."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar a Cadete Services pelo WhatsApp">
 
-</a>
+    <span>📲</span>
+    <span>Pedir orçamento</span>
+
+  </a>
 
 </body>
 </html>
