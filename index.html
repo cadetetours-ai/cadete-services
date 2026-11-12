@@ -230,29 +230,50 @@
       color: #5b6877;
     }
 
-    /* BOTÕES INDIVIDUAIS DOS SERVIÇOS */
+    /* LISTA DE SERVIÇOS */
+
+    .service-list {
+      list-style: none;
+      margin-top: 13px;
+      color: #5b6877;
+      font-size: 14px;
+    }
+
+    .service-list li {
+      padding: 3px 0;
+    }
+
+    .service-list li::before {
+      content: "✓";
+      color: var(--azul);
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    /* BOTÃO PROFISSIONAL DE ORÇAMENTO */
 
     .service-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 20px;
+      margin-top: auto;
+      padding-top: 22px;
     }
 
     .service-btn {
-      display: inline-block;
+      display: block;
+      width: 100%;
       background: var(--azul);
       color: var(--branco);
-      padding: 9px 12px;
-      border-radius: 5px;
-      font-size: 13px;
+      padding: 13px 12px;
+      border-radius: 6px;
+      font-size: 14px;
       font-weight: 700;
+      text-align: center;
       transition: 0.2s;
     }
 
     .service-btn:hover {
       background: var(--azul-escuro);
       transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
     }
 
     /* IMÓVEIS */
@@ -360,7 +381,7 @@
       }
 
       .service-btn {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
 
@@ -430,10 +451,10 @@
         </p>
 
         <a class="btn btn-gold"
-           href="https://wa.me/258875058349"
+           href="https://wa.me/258875058349?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento%20gratuito."
            target="_blank"
-           rel="noopener">
-          Pedir orçamento gratuito por WhatsApp
+           rel="noopener noreferrer">
+          📲 Pedir orçamento gratuito por WhatsApp
         </a>
 
       </div>
@@ -504,24 +525,20 @@
               Serviços de limpeza para diferentes tipos de espaços.
             </p>
 
+            <ul class="service-list">
+              <li>Casas</li>
+              <li>Apartamentos</li>
+              <li>Escritórios</li>
+              <li>Limpeza pós-obras</li>
+            </ul>
+
             <div class="service-actions">
-
               <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20casa."
-                 target="_blank" rel="noopener">Casas</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20apartamento."
-                 target="_blank" rel="noopener">Apartamentos</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20escritorio."
-                 target="_blank" rel="noopener">Escritórios</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20pos-obras."
-                 target="_blank" rel="noopener">Pós-obras</a>
-
+                 href="https://wa.me/258875058349?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento%20gratuito%20para%20Limpeza%20Geral.%20Tenho%20interesse%20em%20limpeza%20de%20casa%2C%20apartamento%2C%20escritorio%20ou%20pos-obras."
+                 target="_blank"
+                 rel="noopener noreferrer">
+                📲 Pedir orçamento gratuito
+              </a>
             </div>
 
           </article>
@@ -538,24 +555,20 @@
               Serviços de pintura e renovação de imóveis.
             </p>
 
+            <ul class="service-list">
+              <li>Pintura de interiores</li>
+              <li>Pintura de exteriores</li>
+              <li>Pintura geral</li>
+              <li>Muros e portões</li>
+            </ul>
+
             <div class="service-actions">
-
               <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20interna."
-                 target="_blank" rel="noopener">Parte interna</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20externa."
-                 target="_blank" rel="noopener">Parte externa</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20geral%20do%20imovel."
-                 target="_blank" rel="noopener">Pintura geral</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20de%20muros%20e%20portoes."
-                 target="_blank" rel="noopener">Muros e portões</a>
-
+                 href="https://wa.me/258875058349?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento%20gratuito%20para%20servicos%20de%20Pintura.%20Tenho%20interesse%20em%20pintura%20interna%2C%20externa%2C%20geral%2C%20muros%20ou%20portoes."
+                 target="_blank"
+                 rel="noopener noreferrer">
+                📲 Pedir orçamento gratuito
+              </a>
             </div>
 
           </article>
@@ -572,24 +585,20 @@
               Montagem, ajustes e reparações de elementos em madeira.
             </p>
 
+            <ul class="service-list">
+              <li>Portas</li>
+              <li>Móveis</li>
+              <li>Armários</li>
+              <li>Montagem de móveis</li>
+            </ul>
+
             <div class="service-actions">
-
               <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20portas."
-                 target="_blank" rel="noopener">Portas</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20moveis."
-                 target="_blank" rel="noopener">Móveis</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20armarios."
-                 target="_blank" rel="noopener">Armários</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20montagem%20de%20moveis."
-                 target="_blank" rel="noopener">Montagem</a>
-
+                 href="https://wa.me/258875058349?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento%20gratuito%20para%20Carpintaria.%20Tenho%20interesse%20em%20portas%2C%20moveis%2C%20armarios%20ou%20montagem."
+                 target="_blank"
+                 rel="noopener noreferrer">
+                📲 Pedir orçamento gratuito
+              </a>
             </div>
 
           </article>
@@ -606,24 +615,20 @@
               Assistência para instalações e problemas de canalização.
             </p>
 
+            <ul class="service-list">
+              <li>Torneiras</li>
+              <li>Fugas de água</li>
+              <li>Tubagens</li>
+              <li>Sanitas e lavatórios</li>
+            </ul>
+
             <div class="service-actions">
-
               <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20torneiras."
-                 target="_blank" rel="noopener">Torneiras</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20fugas%20de%20agua."
-                 target="_blank" rel="noopener">Fugas de água</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20tubagens."
-                 target="_blank" rel="noopener">Tubagens</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20sanitas%20e%20lavatorios."
-                 target="_blank" rel="noopener">Sanitas e lavatórios</a>
-
+                 href="https://wa.me/258875058349?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento%20gratuito%20para%20Canalizacao.%20Tenho%20interesse%20em%20reparacao%20de%20torneiras%2C%20fugas%20de%20agua%2C%20tubagens%2C%20sanitas%20ou%20lavatorios."
+                 target="_blank"
+                 rel="noopener noreferrer">
+                📲 Pedir orçamento gratuito
+              </a>
             </div>
 
           </article>
@@ -640,28 +645,21 @@
               Solicite assistência para os seus equipamentos domésticos.
             </p>
 
+            <ul class="service-list">
+              <li>Ar condicionado</li>
+              <li>Geleiras e frigoríficos</li>
+              <li>Congeladores</li>
+              <li>Máquinas de lavar roupa</li>
+              <li>Máquinas de lavar loiça</li>
+            </ul>
+
             <div class="service-actions">
-
               <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20ar%20condicionado."
-                 target="_blank" rel="noopener">Ar condicionado</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20geleira%20ou%20frigorifico."
-                 target="_blank" rel="noopener">Geleira</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20congelador."
-                 target="_blank" rel="noopener">Congelador</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20maquina%20de%20lavar%20roupa."
-                 target="_blank" rel="noopener">Máquina de lavar roupa</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20maquina%20de%20lavar%20loica."
-                 target="_blank" rel="noopener">Máquina de lavar loiça</a>
-
+                 href="https://wa.me/258875058349?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento%20gratuito%20para%20Reparacao%20de%20Equipamentos.%20Tenho%20interesse%20em%20assistencia%20para%20ar%20condicionado%2C%20geleira%2C%20congelador%20ou%20maquina%20de%20lavar."
+                 target="_blank"
+                 rel="noopener noreferrer">
+                📲 Pedir orçamento gratuito
+              </a>
             </div>
 
           </article>
@@ -678,24 +676,20 @@
               Preparação de casas e apartamentos para arrendamento.
             </p>
 
+            <ul class="service-list">
+              <li>Limpeza do imóvel</li>
+              <li>Pintura</li>
+              <li>Pequenas reparações</li>
+              <li>Preparação completa</li>
+            </ul>
+
             <div class="service-actions">
-
               <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20imovel%20antes%20do%20arrendamento."
-                 target="_blank" rel="noopener">Limpeza</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20de%20imovel%20antes%20do%20arrendamento."
-                 target="_blank" rel="noopener">Pintura</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacoes%20num%20imovel."
-                 target="_blank" rel="noopener">Reparações</a>
-
-              <a class="service-btn"
-                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20um%20orcamento%20para%20preparacao%20completa%20de%20um%20imovel."
-                 target="_blank" rel="noopener">Serviço completo</a>
-
+                 href="https://wa.me/258875058349?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento%20gratuito%20para%20Preparacao%20de%20Imoveis%20antes%20do%20arrendamento.%20Tenho%20interesse%20em%20limpeza%2C%20pintura%2C%20reparacoes%20ou%20preparacao%20completa."
+                 target="_blank"
+                 rel="noopener noreferrer">
+                📲 Pedir orçamento gratuito
+              </a>
             </div>
 
           </article>
@@ -782,7 +776,7 @@
           <a class="whatsapp-link"
              href="https://wa.me/258875058349"
              target="_blank"
-             rel="noopener">
+             rel="noopener noreferrer">
             +258 875058349
           </a>
 
