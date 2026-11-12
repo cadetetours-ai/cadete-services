@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Cadete Services | Prestação de Serviços na Beira</title>
-  <meta name="description" content="Cadete Services na Beira, Moçambique. Serviços de limpeza, pintura, canalização, carpintaria, reparações e preparação de imóveis para arrendamento.">
+  <meta name="description" content="Cadete Services na Beira, Moçambique. Serviços de limpeza, pintura, canalização, carpintaria, reparação de equipamentos e preparação de imóveis. Solicite o seu orçamento gratuito.">
   <meta name="theme-color" content="#0756a3">
 
   <style>
     :root {
       --azul: #0756a3;
       --azul-escuro: #063767;
+      --azul-claro: #0878c9;
       --dourado: #d6a52d;
       --branco: #ffffff;
       --cinza: #f3f6fa;
@@ -45,12 +46,14 @@
       margin: auto;
     }
 
+    /* CABEÇALHO */
+
     header {
       background: var(--branco);
       border-bottom: 3px solid var(--dourado);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
     .header-content {
@@ -95,11 +98,17 @@
       color: var(--dourado);
     }
 
+    /* BANNER PRINCIPAL */
+
     .hero {
       color: var(--branco);
       text-align: center;
       padding: 100px 20px;
-      background: linear-gradient(135deg, #063767, #0878c9);
+      background: linear-gradient(
+        135deg,
+        var(--azul-escuro),
+        var(--azul-claro)
+      );
     }
 
     .hero h1 {
@@ -114,6 +123,8 @@
       margin: 0 auto 30px;
       font-size: 18px;
     }
+
+    /* BOTÕES */
 
     .btn {
       display: inline-block;
@@ -133,6 +144,8 @@
       transform: translateY(-2px);
     }
 
+    /* FAIXA DE BENEFÍCIOS */
+
     .benefits {
       background: var(--azul);
       color: var(--branco);
@@ -149,9 +162,10 @@
       font-weight: 700;
     }
 
+    /* SECÇÕES */
+
     section {
       padding: 70px 0;
-      scroll-margin-top: 100px;
     }
 
     .section-title {
@@ -168,6 +182,8 @@
       color: #5b6877;
     }
 
+    /* SOBRE */
+
     .about {
       background: var(--cinza);
       text-align: center;
@@ -178,12 +194,13 @@
       margin: auto;
     }
 
+    /* SERVIÇOS */
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
       margin-top: 35px;
-      align-items: stretch;
     }
 
     .service-card {
@@ -213,12 +230,13 @@
       color: #5b6877;
     }
 
+    /* BOTÕES INDIVIDUAIS DOS SERVIÇOS */
+
     .service-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
-      margin-top: auto;
-      padding-top: 20px;
+      margin-top: 20px;
     }
 
     .service-btn {
@@ -236,6 +254,8 @@
       background: var(--azul-escuro);
       transform: translateY(-2px);
     }
+
+    /* IMÓVEIS */
 
     .property {
       background: var(--cinza);
@@ -271,6 +291,8 @@
       margin-bottom: 8px;
     }
 
+    /* CONTACTO */
+
     .contact {
       background: var(--azul-escuro);
       color: var(--branco);
@@ -296,6 +318,8 @@
       color: var(--dourado);
     }
 
+    /* RODAPÉ */
+
     footer {
       background: #042746;
       color: var(--branco);
@@ -308,7 +332,10 @@
       color: var(--dourado);
     }
 
+    /* TELEMÓVEIS */
+
     @media (max-width: 760px) {
+
       .header-content {
         flex-direction: column;
         padding: 15px 0;
@@ -331,8 +358,15 @@
       section {
         padding: 55px 0;
       }
+
+      .service-btn {
+        font-size: 12px;
+      }
     }
+
   </style>
+
+  <!-- DADOS ESTRUTURADOS PARA GOOGLE -->
 
   <script type="application/ld+json">
   {
@@ -352,268 +386,428 @@
     }
   }
   </script>
+
 </head>
 
 <body>
 
-<header>
-  <div class="container header-content">
-    <a class="logo" href="#inicio">
-      CADETE <span>SERVICES</span>
-      <small>Prestação de Serviços</small>
-    </a>
+  <!-- CABEÇALHO -->
 
-    <nav aria-label="Navegação principal">
-      <a href="#inicio">Início</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#imoveis">Imóveis</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="container header-content">
 
-<main>
-
-  <section class="hero" id="inicio">
-    <div class="container">
-      <h1>Cuidamos do seu imóvel. Simplificamos a sua vida.</h1>
-
-      <p>
-        Soluções coordenadas de limpeza, manutenção, reparações
-        e preparação de imóveis na Beira, Moçambique.
-      </p>
-
-      <a class="btn btn-gold"
-         href="https://wa.me/258875058349"
-         target="_blank"
-         rel="noopener">
-        Pedir orçamento gratuito por WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <div class="benefits">
-    <div class="container benefits-content">
-      <span>✓ Atendimento personalizado</span>
-      <span>✓ Coordenação de profissionais</span>
-      <span>✓ Soluções para imóveis</span>
-    </div>
-  </div>
-
-  <section class="about">
-    <div class="container">
-      <h2 class="section-title">Sobre a Cadete Services</h2>
-
-      <p>
-        A Cadete Services é uma iniciativa orientada para apoiar
-        proprietários e clientes na conservação e valorização dos
-        seus imóveis. Coordenamos serviços com profissionais
-        especializados, de acordo com as necessidades de cada trabalho.
-      </p>
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section id="servicos">
-    <div class="container">
-
-      <h2 class="section-title">Os nossos serviços</h2>
-
-      <p class="section-intro">
-        Escolha o serviço de que precisa e solicite gratuitamente
-        um orçamento pelo WhatsApp.
-      </p>
-
-      <div class="services-grid">
-
-        <!-- LIMPEZA -->
-        <article class="service-card">
-          <div class="service-icon">🧹</div>
-          <h3>Limpeza Geral</h3>
-          <p>Serviços de limpeza para diferentes tipos de espaços.</p>
-
-          <div class="service-actions">
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20casa." target="_blank" rel="noopener">Casas</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20apartamento." target="_blank" rel="noopener">Apartamentos</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20escritorio." target="_blank" rel="noopener">Escritórios</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20pos-obras." target="_blank" rel="noopener">Pós-obras</a>
-          </div>
-        </article>
-
-        <!-- PINTURA -->
-        <article class="service-card">
-          <div class="service-icon">🎨</div>
-          <h3>Pintura</h3>
-          <p>Serviços de pintura e renovação de imóveis.</p>
-
-          <div class="service-actions">
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20interna." target="_blank" rel="noopener">Parte interna</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20externa." target="_blank" rel="noopener">Parte externa</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20geral%20do%20imovel." target="_blank" rel="noopener">Pintura geral</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20de%20muros%20e%20portoes." target="_blank" rel="noopener">Muros e portões</a>
-          </div>
-        </article>
-
-        <!-- CARPINTARIA -->
-        <article class="service-card">
-          <div class="service-icon">🪚</div>
-          <h3>Carpintaria</h3>
-          <p>Montagem, ajustes e reparações de elementos em madeira.</p>
-
-          <div class="service-actions">
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20portas." target="_blank" rel="noopener">Portas</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20moveis." target="_blank" rel="noopener">Móveis</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20armarios." target="_blank" rel="noopener">Armários</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20montagem%20de%20moveis." target="_blank" rel="noopener">Montagem</a>
-          </div>
-        </article>
-
-        <!-- CANALIZAÇÃO -->
-        <article class="service-card">
-          <div class="service-icon">🔧</div>
-          <h3>Canalização</h3>
-          <p>Assistência para instalações e problemas de canalização.</p>
-
-          <div class="service-actions">
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20torneiras." target="_blank" rel="noopener">Torneiras</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20fugas%20de%20agua." target="_blank" rel="noopener">Fugas de água</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20tubagens." target="_blank" rel="noopener">Tubagens</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20sanitas%20e%20lavatorios." target="_blank" rel="noopener">Sanitas e lavatórios</a>
-          </div>
-        </article>
-
-        <!-- REPARAÇÃO DE EQUIPAMENTOS -->
-        <article class="service-card">
-          <div class="service-icon">❄️</div>
-          <h3>Reparação de Equipamentos</h3>
-          <p>Solicite assistência para os seus equipamentos domésticos.</p>
-
-          <div class="service-actions">
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20ar%20condicionado." target="_blank" rel="noopener">Ar condicionado</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20geleira%20ou%20frigorifico." target="_blank" rel="noopener">Geleira</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20congelador." target="_blank" rel="noopener">Congelador</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20maquina%20de%20lavar%20roupa." target="_blank" rel="noopener">Máquina de lavar roupa</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20maquina%20de%20lavar%20loica." target="_blank" rel="noopener">Máquina de lavar loiça</a>
-          </div>
-        </article>
-
-        <!-- PREPARAÇÃO DE IMÓVEIS -->
-        <article class="service-card">
-          <div class="service-icon">🏠</div>
-          <h3>Preparação de Imóveis</h3>
-          <p>Preparação de casas e apartamentos para arrendamento.</p>
-
-          <div class="service-actions">
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20imovel%20antes%20do%20arrendamento." target="_blank" rel="noopener">Limpeza</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20de%20imovel%20antes%20do%20arrendamento." target="_blank" rel="noopener">Pintura</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacoes%20num%20imovel." target="_blank" rel="noopener">Reparações</a>
-
-            <a class="service-btn" href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20um%20orcamento%20para%20preparacao%20completa%20de%20um%20imovel." target="_blank" rel="noopener">Serviço completo</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- APOIO AO ARRENDAMENTO -->
-  <section class="property" id="imoveis">
-    <div class="container property-content">
-
-      <h2 class="section-title">Apoio no Arrendamento de Imóveis</h2>
-
-      <p>
-        Ajudamos proprietários a divulgar os seus imóveis e a encontrar
-        potenciais interessados no arrendamento. A decisão final sobre
-        a escolha do inquilino pertence sempre ao proprietário.
-      </p>
-
-      <div class="steps">
-
-        <div class="step">
-          <strong>1. Divulgação</strong>
-          Apresentação do imóvel aos potenciais interessados.
-        </div>
-
-        <div class="step">
-          <strong>2. Contactos</strong>
-          Recepção e encaminhamento de interessados.
-        </div>
-
-        <div class="step">
-          <strong>3. Apoio</strong>
-          Apoio na comunicação entre proprietário e interessado.
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTOS -->
-  <section id="contacto" class="contact">
-    <div class="container">
-
-      <h2 class="section-title">Fale connosco</h2>
-
-      <p>
-        Precisa de limpeza, manutenção, reparação ou apoio
-        para preparar o seu imóvel?
-      </p>
-
-      <p>
-        <strong>Localização:</strong> Beira, Sofala, Moçambique
-      </p>
-
-      <p>
-        Entre em contacto para apresentar a sua necessidade
-        e solicitar um orçamento.
-      </p>
-
-      <a class="btn btn-gold" href="mailto:cadetetours@gmail.com">
-        Contactar por email
+      <a class="logo" href="#inicio">
+        CADETE <span>SERVICES</span>
+        <small>Prestação de Serviços</small>
       </a>
 
-      <p style="font-size:14px; margin-top:18px;">
-        <strong>WhatsApp Business:</strong>
-        <a class="whatsapp-link"
+      <nav aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#imoveis">Imóveis</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- BANNER PRINCIPAL -->
+
+    <section class="hero" id="inicio">
+
+      <div class="container">
+
+        <h1>
+          Cuidamos do seu imóvel.
+          Simplificamos a sua vida.
+        </h1>
+
+        <p>
+          Soluções coordenadas de limpeza, manutenção, reparações
+          e preparação de imóveis na Beira, Moçambique.
+        </p>
+
+        <a class="btn btn-gold"
            href="https://wa.me/258875058349"
            target="_blank"
            rel="noopener">
-          +258 875058349
+          Pedir orçamento gratuito por WhatsApp
         </a>
-      </p>
+
+      </div>
+
+    </section>
+
+    <!-- BENEFÍCIOS -->
+
+    <div class="benefits">
+
+      <div class="container benefits-content">
+
+        <span>✓ Atendimento personalizado</span>
+        <span>✓ Coordenação de profissionais</span>
+        <span>✓ Soluções para imóveis</span>
+
+      </div>
 
     </div>
-  </section>
 
-</main>
+    <!-- SOBRE -->
 
-<footer>
-  <p>
-    <span>CADETE SERVICES</span> |
-    Prestação de Serviços | Beira, Moçambique
-  </p>
+    <section class="about">
 
-  <p>© 2026 Cadete Services. Todos os direitos reservados.</p>
-</footer>
+      <div class="container">
+
+        <h2 class="section-title">
+          Sobre a Cadete Services
+        </h2>
+
+        <p>
+          A Cadete Services é uma iniciativa orientada para apoiar
+          proprietários e clientes na conservação e valorização dos
+          seus imóveis. Coordenamos serviços com profissionais
+          especializados, de acordo com as necessidades de cada trabalho.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- SERVIÇOS -->
+
+    <section id="servicos">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Os nossos serviços
+        </h2>
+
+        <p class="section-intro">
+          Escolha o serviço de que precisa e solicite gratuitamente
+          um orçamento pelo WhatsApp.
+        </p>
+
+        <div class="services-grid">
+
+          <!-- LIMPEZA -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🧹</div>
+
+            <h3>Limpeza Geral</h3>
+
+            <p>
+              Serviços de limpeza para diferentes tipos de espaços.
+            </p>
+
+            <div class="service-actions">
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20casa."
+                 target="_blank" rel="noopener">Casas</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20apartamento."
+                 target="_blank" rel="noopener">Apartamentos</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20escritorio."
+                 target="_blank" rel="noopener">Escritórios</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20pos-obras."
+                 target="_blank" rel="noopener">Pós-obras</a>
+
+            </div>
+
+          </article>
+
+          <!-- PINTURA -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🎨</div>
+
+            <h3>Pintura</h3>
+
+            <p>
+              Serviços de pintura e renovação de imóveis.
+            </p>
+
+            <div class="service-actions">
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20interna."
+                 target="_blank" rel="noopener">Parte interna</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20externa."
+                 target="_blank" rel="noopener">Parte externa</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20geral%20do%20imovel."
+                 target="_blank" rel="noopener">Pintura geral</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20de%20muros%20e%20portoes."
+                 target="_blank" rel="noopener">Muros e portões</a>
+
+            </div>
+
+          </article>
+
+          <!-- CARPINTARIA -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🪚</div>
+
+            <h3>Carpintaria</h3>
+
+            <p>
+              Montagem, ajustes e reparações de elementos em madeira.
+            </p>
+
+            <div class="service-actions">
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20portas."
+                 target="_blank" rel="noopener">Portas</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20moveis."
+                 target="_blank" rel="noopener">Móveis</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20armarios."
+                 target="_blank" rel="noopener">Armários</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20montagem%20de%20moveis."
+                 target="_blank" rel="noopener">Montagem</a>
+
+            </div>
+
+          </article>
+
+          <!-- CANALIZAÇÃO -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🔧</div>
+
+            <h3>Canalização</h3>
+
+            <p>
+              Assistência para instalações e problemas de canalização.
+            </p>
+
+            <div class="service-actions">
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20torneiras."
+                 target="_blank" rel="noopener">Torneiras</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20fugas%20de%20agua."
+                 target="_blank" rel="noopener">Fugas de água</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20tubagens."
+                 target="_blank" rel="noopener">Tubagens</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20sanitas%20e%20lavatorios."
+                 target="_blank" rel="noopener">Sanitas e lavatórios</a>
+
+            </div>
+
+          </article>
+
+          <!-- REPARAÇÃO DE EQUIPAMENTOS -->
+
+          <article class="service-card">
+
+            <div class="service-icon">❄️</div>
+
+            <h3>Reparação de Equipamentos</h3>
+
+            <p>
+              Solicite assistência para os seus equipamentos domésticos.
+            </p>
+
+            <div class="service-actions">
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20ar%20condicionado."
+                 target="_blank" rel="noopener">Ar condicionado</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20geleira%20ou%20frigorifico."
+                 target="_blank" rel="noopener">Geleira</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20congelador."
+                 target="_blank" rel="noopener">Congelador</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20maquina%20de%20lavar%20roupa."
+                 target="_blank" rel="noopener">Máquina de lavar roupa</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacao%20de%20maquina%20de%20lavar%20loica."
+                 target="_blank" rel="noopener">Máquina de lavar loiça</a>
+
+            </div>
+
+          </article>
+
+          <!-- PREPARAÇÃO DE IMÓVEIS -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🏠</div>
+
+            <h3>Preparação de Imóveis</h3>
+
+            <p>
+              Preparação de casas e apartamentos para arrendamento.
+            </p>
+
+            <div class="service-actions">
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20limpeza%20de%20imovel%20antes%20do%20arrendamento."
+                 target="_blank" rel="noopener">Limpeza</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20pintura%20de%20imovel%20antes%20do%20arrendamento."
+                 target="_blank" rel="noopener">Pintura</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20solicitar%20preco%20para%20reparacoes%20num%20imovel."
+                 target="_blank" rel="noopener">Reparações</a>
+
+              <a class="service-btn"
+                 href="https://wa.me/258875058349?text=Ola%2C%20pretendo%20um%20orcamento%20para%20preparacao%20completa%20de%20um%20imovel."
+                 target="_blank" rel="noopener">Serviço completo</a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- APOIO NO ARRENDAMENTO -->
+
+    <section class="property" id="imoveis">
+
+      <div class="container property-content">
+
+        <h2 class="section-title">
+          Apoio no Arrendamento de Imóveis
+        </h2>
+
+        <p>
+          Ajudamos proprietários a divulgar os seus imóveis e a encontrar
+          potenciais interessados no arrendamento. A decisão final sobre
+          a escolha do inquilino pertence sempre ao proprietário.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <strong>1. Divulgação</strong>
+            Apresentação do imóvel aos potenciais interessados.
+          </div>
+
+          <div class="step">
+            <strong>2. Contactos</strong>
+            Recepção e encaminhamento de interessados.
+          </div>
+
+          <div class="step">
+            <strong>3. Apoio</strong>
+            Apoio na comunicação entre proprietário e interessado.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+
+    <section id="contacto" class="contact">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Fale connosco
+        </h2>
+
+        <p>
+          Precisa de limpeza, manutenção, reparação ou apoio
+          para preparar o seu imóvel?
+        </p>
+
+        <p>
+          <strong>Localização:</strong>
+          Beira, Sofala, Moçambique
+        </p>
+
+        <p>
+          Entre em contacto para apresentar a sua necessidade
+          e solicitar um orçamento.
+        </p>
+
+        <a class="btn btn-gold"
+           href="mailto:cadetetours@gmail.com">
+          Contactar por email
+        </a>
+
+        <p style="font-size:14px; margin-top:18px;">
+
+          <strong>WhatsApp Business:</strong>
+
+          <a class="whatsapp-link"
+             href="https://wa.me/258875058349"
+             target="_blank"
+             rel="noopener">
+            +258 875058349
+          </a>
+
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    <p>
+      <span>CADETE SERVICES</span> |
+      Prestação de Serviços | Beira, Moçambique
+    </p>
+
+    <p>
+      © 2026 Cadete Services. Todos os direitos reservados.
+    </p>
+
+  </footer>
 
 </body>
 </html>
