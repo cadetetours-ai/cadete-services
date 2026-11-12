@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cadete Services | Limpeza e Manutenção de Imóveis na Beira</title>
+  <meta name="description" content="Cadete Services na Beira, Moçambique. Coordenação de serviços de limpeza, pintura, canalização, carpintaria, reparações e preparação de imóveis para arrendamento.">
+  <meta name="theme-color" content="#0756a3">
+
+  <style>
+    :root {
+      --azul: #0756a3;
+      --azul-escuro: #063767;
+      --dourado: #d6a52d;
+      --branco: #ffffff;
+      --cinza: #f3f6fa;
+      --texto: #263445;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      line-height: 1.6;
+      background: var(--branco);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--branco);
+      border-bottom: 3px solid var(--dourado);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-content {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: var(--azul-escuro);
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--dourado);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--azul-escuro);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: var(--dourado);
+    }
+
+    .hero {
+      color: var(--branco);
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #063767, #0878c9);
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 0 auto 20px;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-gold {
+      background: var(--dourado);
+      color: #172536;
+    }
+
+    .btn-gold:hover {
+      background: #edc75d;
+      transform: translateY(-2px);
+    }
+
+    .benefits {
+      background: var(--azul);
+      color: var(--branco);
+      border-bottom: 3px solid var(--dourado);
+      padding: 18px 0;
+    }
+
+    .benefits-content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px 35px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      color: var(--azul-escuro);
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      max-width: 750px;
+      margin: 0 auto 35px;
+      text-align: center;
+      color: #5b6877;
+    }
+
+    .about {
+      background: var(--cinza);
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .service-card {
+      background: var(--branco);
+      padding: 27px 22px;
+      border-radius: 9px;
+      border: 1px solid #e2e8f0;
+      border-bottom: 4px solid var(--dourado);
+      box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    }
+
+    .service-icon {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      color: var(--azul);
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #5b6877;
+    }
+
+    .property {
+      background: var(--cinza);
+    }
+
+    .property-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .property-content p {
+      margin: 15px 0 25px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .step {
+      background: var(--branco);
+      padding: 22px;
+      border-radius: 8px;
+      border-top: 4px solid var(--azul);
+    }
+
+    .step strong {
+      display: block;
+      color: var(--azul);
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      background: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+    }
+
+    .contact .section-title {
+      color: var(--branco);
+    }
+
+    .contact p {
+      margin: 12px 0 22px;
+    }
+
+    footer {
+      background: #042746;
+      color: var(--branco);
+      text-align: center;
+      padding: 22px 15px;
+      font-size: 14px;
+    }
+
+    footer span {
+      color: var(--dourado);
+    }
+
+    @media (max-width: 760px) {
+      .header-content {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px 16px;
+      }
+
+      .hero {
+        padding: 75px 18px;
+      }
+
+      .services-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Cadete Services",
+    "description": "Coordenação de serviços de limpeza, manutenção, reparação e preparação de imóveis.",
+    "areaServed": {
+      "@type": "City",
+      "name": "Beira"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beira",
+      "addressRegion": "Sofala",
+      "addressCountry": "MZ"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-content">
+      <a class="logo" href="#inicio">CADETE <span>SERVICES</span></a>
+
+      <nav aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#imoveis">Imóveis</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <h1>Cuidamos do seu imóvel. Simplificamos a sua vida.</h1>
+        <p>
+          Soluções coordenadas de limpeza, manutenção, reparações
+          e preparação de imóveis na Beira, Moçambique.
+        </p>
+        <a class="btn btn-gold" href="#contacto">Solicitar um orçamento</a>
+      </div>
+    </section>
+
+    <div class="benefits">
+      <div class="container benefits-content">
+        <span>✓ Atendimento personalizado</span>
+        <span>✓ Coordenação de profissionais</span>
+        <span>✓ Soluções para imóveis</span>
+      </div>
+    </div>
+
+    <section class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre a Cadete Services</h2>
+        <p>
+          A Cadete Services é uma iniciativa orientada para apoiar
+          proprietários e clientes na conservação e valorização dos
+          seus imóveis. Coordenamos serviços com profissionais
+          especializados, de acordo com as necessidades de cada trabalho.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <h2 class="section-title">Os nossos serviços</h2>
+        <p class="section-intro">
+          Um único contacto para organizar diferentes necessidades
+          de limpeza, manutenção e assistência ao seu imóvel.
+        </p>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon">🧹</div>
+            <h3>Limpeza Geral</h3>
+            <p>
+              Limpeza de casas, apartamentos e outros espaços,
+              incluindo cozinhas, casas de banho e janelas.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Pintura e Pequenas Reparações</h3>
+            <p>
+              Pintura de interiores e exteriores e resolução
+              de pequenos problemas de conservação.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🪚</div>
+            <h3>Carpintaria</h3>
+            <p>
+              Serviços de carpintaria, ajustes e pequenas
+              intervenções em portas, móveis e outros elementos.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>Canalização</h3>
+            <p>
+              Coordenação de serviços de canalização,
+              incluindo torneiras, tubagens e pequenas avarias.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">❄️</div>
+            <h3>Reparação de Equipamentos</h3>
+            <p>
+              Assistência para ar condicionado, frigoríficos,
+              congeladores e outros equipamentos domésticos.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🏠</div>
+            <h3>Preparação de Imóveis</h3>
+            <p>
+              Organização de limpeza, pintura e reparações
+              para preparar o imóvel antes da entrada de novos inquilinos.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="imoveis">
+      <div class="container property-content">
+        <h2 class="section-title">Apoio no Arrendamento de Imóveis</h2>
+        <p>
+          Ajudamos proprietários a divulgar os seus imóveis e a encontrar
+          potenciais interessados no arrendamento. A decisão final sobre
+          a escolha do inquilino pertence sempre ao proprietário.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <strong>1. Divulgação</strong>
+            Apresentação do imóvel aos potenciais interessados.
+          </div>
+
+          <div class="step">
+            <strong>2. Contactos</strong>
+            Recepção e encaminhamento de interessados.
+          </div>
+
+          <div class="step">
+            <strong>3. Apoio</strong>
+            Apoio na comunicação entre proprietário e interessado.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="container">
+        <h2 class="section-title">Fale connosco</h2>
+        <p>
+          Precisa de limpeza, manutenção, reparação ou apoio
+          para preparar o seu imóvel?
+        </p>
+        <p><strong>Localização:</strong> Beira, Sofala, Moçambique</p>
+        <p>Entre em contacto para apresentar a sua necessidade e solicitar um orçamento.</p>
+       <a class="btn btn-gold" href="mailto:">
+          Contactar por email
+        </a>
+        <p style="font-size:14px; margin-top:18px;">
+          WhatsApp Business: número a adicionar
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><span>CADETE SERVICES</span> | Beira, Moçambique</p>
+    <p>© 2026 Cadete Services. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
