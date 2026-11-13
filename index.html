@@ -62,6 +62,37 @@
     nav a { color: var(--azul-escuro); font-size: 14px; font-weight: 700; }
     nav a:hover { color: var(--dourado); }
 
+    /* BOTÕES NO CABEÇALHO */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      flex-shrink: 0;
+    }
+    .header-cta {
+      display: inline-block;
+      padding: 9px 13px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: .2s;
+    }
+    .header-cta-price {
+      background: var(--dourado);
+      color: #172536;
+    }
+    .header-cta-price:hover { background: #edc75d; }
+    .header-cta-services {
+      border: 2px solid var(--azul);
+      color: var(--azul);
+    }
+    .header-cta-services:hover {
+      background: var(--azul);
+      color: var(--branco);
+    }
+
     /* BANNER PRINCIPAL
        A imagem mantém as proporções originais para não cortar o logótipo.
        Os dois botões ficam sobre a imagem. */
@@ -85,15 +116,6 @@
       align-items: center;
       justify-content: center;
     }
-    .hero-actions {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 12px;
-    }
-
     /* BOTÕES */
     .btn {
       display: inline-block;
@@ -292,12 +314,10 @@
     .whatsapp-float:hover { background: #1ebe5d; }
 
     @media (max-width: 760px) {
-      .header-content { flex-direction: column; padding: 13px 0; }
-      nav { justify-content: center; gap: 10px 15px; }
-
-      /* Mantém a imagem inteira e adapta os botões ao ecrã pequeno. */
-      .hero-actions { gap: 8px; padding: 8px; }
-      .hero .btn { padding: 9px 12px; font-size: 13px; }
+      .header-content { flex-direction: column; padding: 13px 0; gap: 12px; }
+      .header-actions { order: 2; }
+      nav { order: 3; justify-content: center; gap: 10px 15px; }
+      .header-cta { padding: 8px 12px; font-size: 12px; }
 
       .services-grid, .why-grid, .steps { grid-template-columns: 1fr; }
       section.content-section { padding: 48px 0; }
@@ -305,10 +325,6 @@
       .whatsapp-float { right: 12px; bottom: 12px; padding: 12px 14px; }
     }
 
-    @media (max-width: 380px) {
-      .hero-actions { gap: 6px; }
-      .hero .btn { padding: 8px 9px; font-size: 12px; }
-    }
   </style>
 
   <script type="application/ld+json">
@@ -340,6 +356,14 @@
         CADETE <span>SERVICES</span>
         <small>SOLUÇÕES PARA O SEU IMÓVEL</small>
       </a>
+
+      <div class="header-actions">
+        <a class="header-cta header-cta-price"
+           href="https://wa.me/258875058349?text=Ola%2C%20Cadete%20Services!%20Gostaria%20de%20pedir%20um%20orcamento."
+           target="_blank" rel="noopener noreferrer">Pedir preço</a>
+        <a class="header-cta header-cta-services" href="#servicos">Ver serviços</a>
+      </div>
+
       <nav aria-label="Navegação principal">
         <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
@@ -357,15 +381,6 @@
         src="banner-cadete-services.jpg.jpeg"
         alt="Banner Cadete Services"
       >
-      <div class="container">
-        <div class="hero-actions">
-          <a class="btn btn-gold"
-             href="https://wa.me/258875058349?text=Ola%2C%20Cadete%20Services!%20Gostaria%20de%20pedir%20um%20orcamento."
-             target="_blank" rel="noopener noreferrer">📲 Pedir orçamento</a>
-
-          <a class="btn btn-outline" href="#servicos">🏠 Ver serviços</a>
-        </div>
-      </div>
     </section>
 
     <div class="benefits">
