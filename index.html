@@ -71,7 +71,7 @@
     url('banner-cadete-services.jpg.jpeg') center/cover no-repeat;
   color: var(--branco);
   text-align: center;
-  padding: 36px 0 42px;
+  padding: 150px 0;
 }
     .hero-logo {
       display: block;
@@ -301,7 +301,7 @@
     @media (max-width: 760px) {
       .header-content { flex-direction: column; padding: 13px 0; }
       nav { justify-content: center; gap: 10px 15px; }
-      .hero { padding: 27px 0 32px; }
+      .hero { padding: 100px 0; }
       .hero-logo { max-height: 125px; width: min(100%, 420px); }
       .hero p { font-size: 15px; line-height: 1.65; }
       .services-grid, .why-grid, .steps { grid-template-columns: 1fr; }
@@ -352,25 +352,16 @@
 
   <main>
     <section class="hero" id="inicio">
-      <div class="container">
-        <img
-          src="logo-cadete-services.png.png"
-          alt="Cadete Services - Soluções para o seu imóvel"
-          class="hero-logo">
-        <h1>Soluções completas para manutenção e valorização de imóveis na Beira</h1>
-        <p>
-          Coordenamos profissionais parceiros para serviços de limpeza,
-          pintura, carpintaria, canalização, reparações e preparação de imóveis.
-          Conte connosco para encontrar uma solução adequada às necessidades do seu espaço.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-gold"
-             href="https://wa.me/258875058349?text=Ola%2C%20Cadete%20Services!%20Gostaria%20de%20pedir%20um%20orcamento."
-             target="_blank" rel="noopener noreferrer">📲 Pedir orçamento</a>
-          <a class="btn btn-outline" href="#servicos">🏠 Ver serviços</a>
-        </div>
-      </div>
-    </section>
+  <div class="container">
+    <div class="hero-actions">
+      <a class="btn btn-gold"
+         href="https://wa.me/258875058349?text=Ola%2C%20Cadete%20Services!%20Gostaria%20de%20pedir%20um%20orcamento."
+         target="_blank" rel="noopener noreferrer">📲 Pedir orçamento</a>
+
+      <a class="btn btn-outline" href="#servicos">🏠 Ver serviços</a>
+    </div>
+  </div>
+</section>
 
     <div class="benefits">
       <div class="container benefits-content">
