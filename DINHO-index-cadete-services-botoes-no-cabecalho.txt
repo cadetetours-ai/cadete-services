@@ -1,0 +1,1322 @@
+
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cadete Services | Serviços de Imóveis em Moçambique, Beira</title>
+
+  <meta name="description" content="Cadete Services em Moçambique, Beira: limpeza, pintura, carpintaria, canalização, reparação de equipamentos, manutenção e preparação de imóveis. Solicite um orçamento gratuito.">
+
+  <meta name="theme-color" content="#0756a3">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://cadetetours-ai.github.io/cadete-services/">
+
+  <style>
+    :root {
+      --azul: #0756a3;
+      --azul-escuro: #063767;
+      --azul-claro: #dceeff;
+      --dourado: #d6a52d;
+      --branco: #ffffff;
+      --cinza: #f3f6fa;
+      --texto: #263445;
+      --borda: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      line-height: 1.65;
+      background: var(--branco);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* CABEÇALHO */
+
+    header {
+      background: var(--branco);
+      border-bottom: 3px solid var(--dourado);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+
+    .header-content {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      color: var(--azul-escuro);
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--dourado);
+    }
+
+    .logo small {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.3px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 17px;
+    }
+
+    nav a {
+      color: var(--azul-escuro);
+      font-size: 13px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: var(--dourado);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      flex-shrink: 0;
+    }
+
+    .header-cta {
+      display: inline-block;
+      padding: 10px 13px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: .2s;
+    }
+
+    .header-cta-price {
+      background: var(--dourado);
+      color: #172536;
+    }
+
+    .header-cta-price:hover {
+      background: #edc75d;
+    }
+
+    .header-cta-services {
+      border: 2px solid var(--azul);
+      color: var(--azul);
+    }
+
+    .header-cta-services:hover {
+      background: var(--azul);
+      color: var(--branco);
+    }
+
+    /* BANNER */
+
+    .hero {
+      width: 100%;
+      overflow: hidden;
+      background: var(--azul-escuro);
+    }
+
+    .hero-banner-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* BOTÕES */
+
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      border: 0;
+      border-radius: 6px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .btn-gold {
+      background: var(--dourado);
+      color: #172536;
+    }
+
+    .btn-gold:hover {
+      background: #edc75d;
+      transform: translateY(-2px);
+    }
+
+    /* BENEFÍCIOS */
+
+    .benefits {
+      background: var(--azul);
+      color: var(--branco);
+      border-bottom: 3px solid var(--dourado);
+      padding: 16px 0;
+    }
+
+    .benefits-content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 30px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* SECÇÕES */
+
+    section.content-section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      color: var(--azul-escuro);
+      text-align: center;
+      font-size: clamp(26px, 3vw, 34px);
+      line-height: 1.2;
+      margin-bottom: 13px;
+    }
+
+    .section-intro {
+      max-width: 780px;
+      margin: 0 auto 32px;
+      text-align: center;
+      color: #5b6877;
+    }
+
+    /* SOBRE */
+
+    .about {
+      background: var(--cinza);
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    /* SERVIÇOS */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 32px;
+    }
+
+    .service-card {
+      background: var(--branco);
+      padding: 25px 22px;
+      border-radius: 10px;
+      border: 1px solid var(--borda);
+      border-bottom: 4px solid var(--dourado);
+      box-shadow: 0 5px 18px rgba(0,0,0,.055);
+      display: flex;
+      flex-direction: column;
+      transition: .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 9px 23px rgba(0,0,0,.09);
+    }
+
+    .service-icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .service-card h3 {
+      color: var(--azul);
+      margin-bottom: 9px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #5b6877;
+    }
+
+    .service-list {
+      list-style: none;
+      margin-top: 12px;
+      color: #5b6877;
+      font-size: 14px;
+    }
+
+    .service-list li {
+      padding: 3px 0;
+    }
+
+    .service-list li::before {
+      content: "✓";
+      color: var(--azul);
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .service-actions {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+
+    .service-btn {
+      display: block;
+      width: 100%;
+      background: var(--azul);
+      color: var(--branco);
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      transition: .2s;
+    }
+
+    .service-btn:hover {
+      background: var(--azul-escuro);
+    }
+
+    /* PORQUÊ ESCOLHER-NOS */
+
+    .why {
+      background: var(--azul-claro);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .why-item {
+      background: var(--branco);
+      border-radius: 9px;
+      padding: 22px;
+      text-align: center;
+      border: 1px solid #c8def2;
+    }
+
+    .why-item strong {
+      display: block;
+      color: var(--azul-escuro);
+      margin-bottom: 6px;
+    }
+
+    .why-item span {
+      font-size: 14px;
+      color: #5b6877;
+    }
+
+    /* ARRENDAMENTO */
+
+    .property {
+      background: var(--cinza);
+    }
+
+    .property-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .property-content > p {
+      margin: 14px 0 24px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .step {
+      background: var(--branco);
+      padding: 22px;
+      border-radius: 8px;
+      border-top: 4px solid var(--azul);
+      font-size: 14px;
+    }
+
+    .step strong {
+      display: block;
+      color: var(--azul);
+      margin-bottom: 7px;
+      font-size: 16px;
+    }
+
+    /* CONTACTO */
+
+    .contact {
+      background: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+    }
+
+    .contact .section-title {
+      color: var(--branco);
+    }
+
+    .contact .section-intro {
+      color: #e6f0fb;
+    }
+
+    .contact-details {
+      margin: 18px 0;
+      line-height: 2;
+    }
+
+    .contact-details a {
+      color: var(--branco);
+      text-decoration: underline;
+    }
+
+    /* FORMULÁRIO */
+
+    .quote-form {
+      max-width: 680px;
+      margin: 28px auto 0;
+      padding: 27px;
+      background: var(--branco);
+      color: var(--texto);
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0 8px 25px rgba(0,0,0,.15);
+    }
+
+    .form-heading {
+      color: var(--azul-escuro);
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+
+    .form-description {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 17px;
+    }
+
+    .quote-form label {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      margin: 13px 0 5px;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font: inherit;
+      font-size: 14px;
+      background: #fff;
+      color: var(--texto);
+    }
+
+    .quote-form input:focus,
+    .quote-form select:focus,
+    .quote-form textarea:focus {
+      outline: 2px solid var(--azul);
+      border-color: var(--azul);
+    }
+
+    .quote-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .required {
+      color: #c62828;
+    }
+
+    .quote-form button {
+      width: 100%;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    .form-note {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+      background: #042746;
+      color: var(--branco);
+      text-align: center;
+      padding: 27px 15px;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    footer span {
+      color: var(--dourado);
+      font-weight: 700;
+    }
+
+    footer a {
+      color: var(--branco);
+      text-decoration: underline;
+    }
+
+    /* WHATSAPP FLUTUANTE */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      padding: 13px 17px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(0,0,0,.24);
+      transition: .2s;
+    }
+
+    .whatsapp-float:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+    }
+
+    /* TABLETS */
+
+    @media (max-width: 1000px) {
+      .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 13px 0;
+      }
+
+      nav {
+        justify-content: center;
+      }
+    }
+
+    /* TELEMÓVEIS */
+
+    @media (max-width: 760px) {
+      .header-content {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .logo {
+        text-align: center;
+        font-size: 23px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 10px 15px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .header-actions {
+        justify-content: center;
+      }
+
+      .header-cta {
+        padding: 9px 13px;
+        font-size: 12px;
+      }
+
+      .services-grid,
+      .why-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      section.content-section {
+        padding: 48px 0;
+      }
+
+      .benefits-content {
+        gap: 8px;
+        font-size: 12px;
+      }
+
+      .quote-form {
+        padding: 19px;
+      }
+
+      .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 14px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .header-actions {
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      nav {
+        gap: 9px;
+      }
+    }
+
+  </style>
+
+  <!-- INFORMAÇÕES PARA GOOGLE -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Cadete Services",
+    "description": "Coordenação de serviços de limpeza, pintura, manutenção, reparação e preparação de imóveis.",
+    "url": "https://cadetetours-ai.github.io/cadete-services/",
+    "areaServed": {
+      "@type": "City",
+      "name": "Beira"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beira",
+      "addressRegion": "Sofala",
+      "addressCountry": "MZ"
+    },
+    "telephone": "+258875058349",
+    "email": "cadetetours@gmail.com"
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+
+  <header>
+    <div class="container header-content">
+
+      <a class="logo" href="#inicio">
+        CADETE <span>SERVICES</span>
+        <small>SOLUÇÕES PARA O SEU IMÓVEL</small>
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#porque">Porquê escolher-nos</a>
+        <a href="#imoveis">Imóveis</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <a class="header-cta header-cta-price"
+           href="#contacto">
+          Pedir orçamento
+        </a>
+
+        <a class="header-cta header-cta-services"
+           href="#servicos">
+          Ver serviços
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- BANNER PRINCIPAL -->
+
+    <section class="hero" id="inicio">
+
+      <img
+        class="hero-banner-image"
+        src="banner-cadete-services.jpg.jpeg"
+        alt="Cadete Services - Soluções profissionais para o seu imóvel"
+        fetchpriority="high"
+      >
+
+    </section>
+
+    <!-- BENEFÍCIOS -->
+
+    <div class="benefits">
+
+      <div class="container benefits-content">
+
+        <span>✓ Orçamento gratuito</span>
+        <span>✓ Atendimento personalizado</span>
+        <span>✓ Coordenação de profissionais parceiros</span>
+
+      </div>
+
+    </div>
+
+    <!-- SOBRE -->
+
+    <section class="content-section about">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Sobre a Cadete Services
+        </h2>
+
+        <p>
+          A Cadete Services é uma iniciativa orientada para apoiar
+          proprietários e clientes na conservação e valorização dos
+          seus imóveis. Fazemos a coordenação dos pedidos com
+          profissionais parceiros, acompanhando cada necessidade
+          desde o primeiro contacto até à conclusão do serviço.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- SERVIÇOS -->
+
+    <section class="content-section" id="servicos">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Os nossos serviços
+        </h2>
+
+        <p class="section-intro">
+          Oferecemos diferentes soluções para limpeza, conservação,
+          manutenção e preparação de imóveis. Escolha o serviço
+          pretendido e solicite gratuitamente o seu orçamento.
+        </p>
+
+        <div class="services-grid">
+
+          <!-- LIMPEZA -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🧹</div>
+
+            <h3>Limpeza Geral</h3>
+
+            <p>
+              Limpeza de espaços para uso diário, mudança
+              ou preparação de imóveis.
+            </p>
+
+            <ul class="service-list">
+              <li>Casas e apartamentos</li>
+              <li>Escritórios</li>
+              <li>Limpeza pós-obras</li>
+              <li>Limpeza antes de arrendamento</li>
+            </ul>
+
+            <div class="service-actions">
+              <a class="service-btn" href="#contacto"
+                 data-service="Limpeza Geral">
+                Solicitar orçamento
+              </a>
+            </div>
+
+          </article>
+
+          <!-- PINTURA -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🎨</div>
+
+            <h3>Pintura</h3>
+
+            <p>
+              Serviços de pintura e renovação de diferentes
+              áreas do imóvel.
+            </p>
+
+            <ul class="service-list">
+              <li>Pintura de interiores</li>
+              <li>Pintura de exteriores</li>
+              <li>Muros e portões</li>
+              <li>Renovação de espaços</li>
+            </ul>
+
+            <div class="service-actions">
+              <a class="service-btn" href="#contacto"
+                 data-service="Pintura">
+                Solicitar orçamento
+              </a>
+            </div>
+
+          </article>
+
+          <!-- CARPINTARIA -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🪚</div>
+
+            <h3>Carpintaria</h3>
+
+            <p>
+              Montagem, ajustes e reparações de elementos
+              em madeira.
+            </p>
+
+            <ul class="service-list">
+              <li>Portas e fechaduras de madeira</li>
+              <li>Móveis e armários</li>
+              <li>Montagem de móveis</li>
+              <li>Pequenas reparações</li>
+            </ul>
+
+            <div class="service-actions">
+              <a class="service-btn" href="#contacto"
+                 data-service="Carpintaria">
+                Solicitar orçamento
+              </a>
+            </div>
+
+          </article>
+
+          <!-- CANALIZAÇÃO -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🔧</div>
+
+            <h3>Canalização</h3>
+
+            <p>
+              Assistência para instalações e problemas
+              de canalização.
+            </p>
+
+            <ul class="service-list">
+              <li>Torneiras e fugas de água</li>
+              <li>Tubagens</li>
+              <li>Sanitas e lavatórios</li>
+              <li>Pequenas instalações</li>
+            </ul>
+
+            <div class="service-actions">
+              <a class="service-btn" href="#contacto"
+                 data-service="Canalização">
+                Solicitar orçamento
+              </a>
+            </div>
+
+          </article>
+
+          <!-- EQUIPAMENTOS -->
+
+          <article class="service-card">
+
+            <div class="service-icon">❄️</div>
+
+            <h3>Reparação de Equipamentos</h3>
+
+            <p>
+              Coordenação de assistência para equipamentos
+              domésticos.
+            </p>
+
+            <ul class="service-list">
+              <li>Ar condicionado</li>
+              <li>Geleiras e frigoríficos</li>
+              <li>Congeladores</li>
+              <li>Máquinas de lavar roupa e loiça</li>
+            </ul>
+
+            <div class="service-actions">
+              <a class="service-btn" href="#contacto"
+                 data-service="Reparação de Equipamentos">
+                Solicitar orçamento
+              </a>
+            </div>
+
+          </article>
+
+          <!-- PREPARAÇÃO DE IMÓVEIS -->
+
+          <article class="service-card">
+
+            <div class="service-icon">🏠</div>
+
+            <h3>Preparação de Imóveis</h3>
+
+            <p>
+              Preparação de casas e apartamentos para
+              receber novos inquilinos.
+            </p>
+
+            <ul class="service-list">
+              <li>Limpeza do imóvel</li>
+              <li>Pintura</li>
+              <li>Pequenas reparações</li>
+              <li>Preparação antes do arrendamento</li>
+            </ul>
+
+            <div class="service-actions">
+              <a class="service-btn" href="#contacto"
+                 data-service="Preparação de Imóveis">
+                Solicitar orçamento
+              </a>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PORQUÊ ESCOLHER-NOS -->
+
+    <section class="content-section why" id="porque">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Porquê escolher a Cadete Services?
+        </h2>
+
+        <p class="section-intro">
+          Procuramos tornar mais simples a contratação e
+          coordenação de serviços para o seu imóvel.
+        </p>
+
+        <div class="why-grid">
+
+          <div class="why-item">
+            <strong>Orçamento gratuito</strong>
+            <span>
+              Apresente a sua necessidade e solicite uma estimativa.
+            </span>
+          </div>
+
+          <div class="why-item">
+            <strong>Atendimento personalizado</strong>
+            <span>
+              Ouvimos o que precisa antes de encaminhar o pedido.
+            </span>
+          </div>
+
+          <div class="why-item">
+            <strong>Coordenação de parceiros</strong>
+            <span>
+              Ligamos cada pedido aos profissionais parceiros adequados.
+            </span>
+          </div>
+
+          <div class="why-item">
+            <strong>Acompanhamento</strong>
+            <span>
+              Acompanhamos a comunicação durante a prestação do serviço.
+            </span>
+          </div>
+
+          <div class="why-item">
+            <strong>Vários serviços</strong>
+            <span>
+              Encontre diferentes soluções para o seu imóvel num só contacto.
+            </span>
+          </div>
+
+          <div class="why-item">
+            <strong>Atendimento na Beira</strong>
+            <span>
+              Serviços coordenados na Beira, Sofala, conforme disponibilidade.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ARRENDAMENTO DE IMÓVEIS -->
+
+    <section class="content-section property" id="imoveis">
+
+      <div class="container property-content">
+
+        <h2 class="section-title">
+          Apoio no Arrendamento de Imóveis
+        </h2>
+
+        <p>
+          Ajudamos proprietários a divulgar os seus imóveis e a
+          encaminhar potenciais interessados no arrendamento.
+          A decisão final sobre a escolha do inquilino pertence
+          sempre ao proprietário.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+            <strong>1. Divulgação</strong>
+            Apresentação do imóvel aos potenciais interessados.
+          </div>
+
+          <div class="step">
+            <strong>2. Contactos</strong>
+            Recepção e encaminhamento de pessoas interessadas.
+          </div>
+
+          <div class="step">
+            <strong>3. Apoio</strong>
+            Apoio na comunicação entre proprietário e interessado.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACTO E PEDIDO DE ORÇAMENTO -->
+
+    <section class="content-section contact" id="contacto">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          Solicite o seu orçamento gratuito
+        </h2>
+
+        <p class="section-intro">
+          Preencha o formulário com os seus dados, indique o endereço
+          do imóvel e escolha o serviço pretendido. O seu pedido será
+          preparado automaticamente para envio pelo WhatsApp.
+        </p>
+
+        <div class="contact-details">
+
+          <p>
+            <strong>Localização:</strong>
+            Beira, Sofala, Moçambique
+          </p>
+
+          <p>
+            <strong>WhatsApp:</strong>
+            <a href="https://wa.me/258875058349"
+               target="_blank" rel="noopener noreferrer">
+              +258 875 058 349
+            </a>
+          </p>
+
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:cadetetours@gmail.com">
+              cadetetours@gmail.com
+            </a>
+          </p>
+
+        </div>
+
+        <!-- FORMULÁRIO -->
+
+        <form class="quote-form" id="quoteForm">
+
+          <h3 class="form-heading">
+            Formulário de Pedido de Orçamento
+          </h3>
+
+          <p class="form-description">
+            Os campos assinalados com * são obrigatórios.
+          </p>
+
+          <label for="nome">
+            Nome completo <span class="required">*</span>
+          </label>
+
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            placeholder="Introduza o seu nome completo"
+            autocomplete="name"
+            required
+          >
+
+          <label for="telefone">
+            Número de telefone <span class="required">*</span>
+          </label>
+
+          <input
+            id="telefone"
+            name="telefone"
+            type="tel"
+            placeholder="+258 8XXXXXXXX"
+            autocomplete="tel"
+            required
+          >
+
+          <label for="endereco">
+            Endereço do imóvel <span class="required">*</span>
+          </label>
+
+          <input
+            id="endereco"
+            name="endereco"
+            type="text"
+            placeholder="Ex.: Bairro, avenida, rua ou referência"
+            required
+          >
+
+          <label for="servico">
+            Serviço pretendido <span class="required">*</span>
+          </label>
+
+          <select id="servico" name="servico" required>
+
+            <option value="">Seleccione um serviço</option>
+
+            <option value="Limpeza Geral">
+              Limpeza Geral
+            </option>
+
+            <option value="Pintura">
+              Pintura
+            </option>
+
+            <option value="Carpintaria">
+              Carpintaria
+            </option>
+
+            <option value="Canalização">
+              Canalização
+            </option>
+
+            <option value="Reparação de Equipamentos">
+              Reparação de Equipamentos
+            </option>
+
+            <option value="Preparação de Imóveis">
+              Preparação de Imóveis
+            </option>
+
+            <option value="Apoio no Arrendamento">
+              Apoio no Arrendamento
+            </option>
+
+            <option value="Outro pedido">
+              Outro pedido
+            </option>
+
+          </select>
+
+          <label for="detalhes">
+            Descrição do serviço
+          </label>
+
+          <textarea
+            id="detalhes"
+            name="detalhes"
+            placeholder="Descreva o trabalho que pretende realizar, dimensões, quantidade, estado do imóvel ou outras informações importantes."
+          ></textarea>
+
+          <button class="btn btn-gold" type="submit">
+            📲 Enviar pedido pelo WhatsApp
+          </button>
+
+          <p class="form-note">
+            Ao clicar, o WhatsApp será aberto com os dados do seu
+            pedido. Confirme a mensagem para a enviar.
+          </p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    <p>
+      <span>CADETE SERVICES</span>
+      | Soluções para o seu imóvel
+    </p>
+
+    <p>Beira, Sofala, Moçambique</p>
+
+    <p>
+      WhatsApp:
+      <a href="https://wa.me/258875058349">
+        +258 875 058 349
+      </a>
+      |
+      Email:
+      <a href="mailto:cadetetours@gmail.com">
+        cadetetours@gmail.com
+      </a>
+    </p>
+
+    <p>
+      © 2026 Cadete Services. Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+  <!-- WHATSAPP FLUTUANTE -->
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/258875058349?text=Ola%2C%20Cadete%20Services!%20Gostaria%20de%20solicitar%20um%20orcamento."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Pedir orçamento pelo WhatsApp"
+  >
+    <span>💬</span>
+    <span>Falar no WhatsApp</span>
+  </a>
+
+  <!-- FUNCIONAMENTO DO FORMULÁRIO -->
+
+  <script>
+
+    // SELECÇÃO AUTOMÁTICA DO SERVIÇO
+
+    document.querySelectorAll('[data-service]').forEach(function(botao) {
+
+      botao.addEventListener('click', function() {
+
+        const servico = this.getAttribute('data-service');
+
+        document.getElementById('servico').value = servico;
+
+      });
+
+    });
+
+    // ENVIO DO PEDIDO PELO WHATSAPP
+
+    document.getElementById('quoteForm').addEventListener('submit', function(event) {
+
+      event.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+
+      const telefone = document.getElementById('telefone').value.trim();
+
+      const endereco = document.getElementById('endereco').value.trim();
+
+      const servico = document.getElementById('servico').value;
+
+      const detalhes = document.getElementById('detalhes').value.trim();
+
+      // VERIFICAÇÃO DOS CAMPOS OBRIGATÓRIOS
+
+      if (!nome || !telefone || !endereco || !servico) {
+
+        alert('Por favor, preencha todos os campos obrigatórios.');
+
+        return;
+
+      }
+
+      // CONSTRUÇÃO DA MENSAGEM
+
+      const mensagem =
+        'Olá, Cadete Services!\n\n' +
+        'Gostaria de solicitar um orçamento gratuito.\n\n' +
+
+        'DADOS DO CLIENTE\n' +
+        'Nome: ' + nome + '\n' +
+        'Telefone: ' + telefone + '\n' +
+        'Endereço do imóvel: ' + endereco + '\n\n' +
+
+        'SERVIÇO SOLICITADO\n' +
+        'Serviço: ' + servico + '\n\n' +
+
+        'DESCRIÇÃO DO PEDIDO\n' +
+        (detalhes || 'Não foram indicados detalhes adicionais.') +
+
+        '\n\nAguardo o vosso contacto. Obrigado!';
+
+      // ABERTURA DO WHATSAPP
+
+      const url =
+        'https://wa.me/258875058349?text=' +
+        encodeURIComponent(mensagem);
+
+      window.open(url, '_blank');
+
+    });
+
+  </script>
+
+</body>
+</html>
