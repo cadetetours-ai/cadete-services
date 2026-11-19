@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://cadetetours-ai.github.io/cadete-services/sitemap.xml
